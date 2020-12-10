@@ -1,7 +1,5 @@
 #include<iostream>
 #include <deque>
-#include <algorithm>
-
 using namespace std;
 int main(){
     int n;
@@ -13,18 +11,17 @@ int main(){
     int k;
     cin>>k;
     deque<int> d(k);
-    deque<int> Q(k);
     for(int i=0;i<n;i++){
         if(i>=k){
-            cout<<ar[Q.front()]<<" ";
-            while(!Q.empty() && Q.front()<=i-k){
-                Q.pop_front();
+            cout << ar[d.front()] << " ";
+            while(!d.empty() && d.front() <= i - k){
+                d.pop_front();
             }
         }
-        while(!Q.empty() && ar[i]>=ar[Q.back()]){
-            Q.pop_back();
+        while(!d.empty() && ar[i] >= ar[d.back()]){
+            d.pop_back();
         }
-        Q.push_back(i);
+        d.push_back(i);
     }
-    cout<<ar[Q.front()];
+    cout<<ar[d.front()];
 }
