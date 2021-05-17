@@ -1,4 +1,4 @@
 # Project exclude paths
 /cmake-build-debug/
-.idea/
+/.idea/
 CMakeLists.txt
