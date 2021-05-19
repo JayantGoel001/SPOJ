@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #define int long long int
 using namespace std;
 int32_t main(){
